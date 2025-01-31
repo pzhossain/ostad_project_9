@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --primary-color: #EFB036; 
+    --secondary-color: #23486A; 
+    --accent-color: #fff; 
+    --bg-color: #3B6790; 
+    --shadow-color: #574964;
+    --success-color: #16404D; 
+    --error-color: #8E1616; 
+  }
+  
+  body {
+    font-family: "Quicksand", serif;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+  }
+  
+  
