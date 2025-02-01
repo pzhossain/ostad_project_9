@@ -4,11 +4,11 @@
     box-sizing: border-box;
   }
   :root {
-    --primary-color: #89B9AD; 
-    --secondary-color: #FFC5C5; 
+    --primary-color: #A31D1D; 
+    --secondary-color: #FF9D23; 
     --accent-color: #fff; 
-    --bg-color: #FFEBD8; 
-    --shadow-color: #C7DCA7;
+    --bg-color: #FEF9E1; 
+    --shadow-color: #191f11;
     --success-color: green; 
     --error-color: red; 
   }
@@ -51,7 +51,7 @@
 }
 
 .navigation a:hover{
-    color: var(--bg-color);
+    color: var(--shadow-color);
 }
 
 /* Hero */
@@ -77,8 +77,9 @@
 }
 
 .hero_content p{
-    color: var(--accent-color);
-    font-size: 1.2rem;
+    color: var(--shadow-color);
+    font-size: 14px;
+    margin: 20px 0;
 }
 
 .hero_image{
@@ -86,4 +87,159 @@
     max-width: 350px;
 }
 
-  
+.hero_button{
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 10px 10px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero_button:hover{
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+/* Feature */
+
+.frature{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px 40px;
+    text-align: center;    
+}
+
+.feature_box{
+    background-color: var(--primary-color);
+    padding: 30px;
+    height: auto;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.feature_box a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;   
+}
+
+.feature_box p{
+    color: var(--accent-color);
+    margin-top: 10px;    
+}
+
+.feature_box p:hover{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.feature_box h3:hover{
+    color: var(--primary-color);
+}
+
+.feature_box:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+
+/* Pricing */
+
+.pricing{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px 30px;
+}
+
+.plans {
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+    box-sizing: content-box;
+    padding: 35px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: justify;    
+    transition: all 0.3s ease-in-out;
+}
+
+.plans:hover {
+    transform: scale(1.1);
+
+}
+
+.plans a{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.plans p.price {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+}
+
+.features_list p{
+    text-align: justify;
+    font-size: 16px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.text_green {
+    color: var(--success-color);
+    margin-right: 10px;
+}
+
+.text_red {
+    color: var(--error-color);
+    margin-right: 10px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 20px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .frature {
+        display: grid;
+        grid-template-columns: 2fr;        
+    }
+
+    .pricing {
+        flex-direction: column;
+        align-items: center;        
+    }
+
+    .footer {
+        grid-template-columns: 1fr;        
+    }
+    
+}
